@@ -29,12 +29,8 @@ h1 {
     color: #ffc107;
 }
 
-ul {
-    padding: 0;
-}
-
 input{
-    margin: 20px;
+    margin: 10px;
     border: none;
     border-bottom: 2px solid rgb(121, 121, 121);
     opacity: 70%;
@@ -45,6 +41,9 @@ input{
 input:focus{
     opacity: 100%;
     border-bottom: 2px solid rgb(38, 70, 124);
+}
+button{
+    width: 500px;
 }
 
 table{

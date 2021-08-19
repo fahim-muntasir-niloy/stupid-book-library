@@ -1,12 +1,36 @@
-// declaring variables for ids
-let book = document.getElementById("Book");
-let author = document.getElementById("Author");
-let date = document.getElementById("Date")
+// declaring constants
 
-let submitBtn = document.getElementById("submitBtn")
+let a = document.getElementById("Author")
+let b = document.getElementById("Book")
+let d = document.getElementById("Date")
+let btn = document.getElementById("submitBtn")
 
-submitBtn.addEventListener("click",entry)
+let bookList = document.getElementById("book-list")
 
-function entry(){
-    alert('working')
+btn.addEventListener('click', function(){
+    
+    //basic validation of input
+    if (a.value == "" || b.value =="" || d.value ==""){
+        alert("Data Missing, Check again")
+    }
+    else{
+        let newRow = document.createElement('tr')
+    
+
+    //inserting data in table
+    let newA = document.createElement("td")
+    newA.innerHTML = a.value;
+    newRow.appendChild(newA);
+
+    let newB = document.createElement("td")
+    newB.innerHTML = b.value;
+    newRow.appendChild(newB);
+
+    let newD = document.createElement("td")
+    newD.innerHTML = d.value;
+    newRow.appendChild(newD);
+
+    //displaying data
+    bookList.appendChild(newRow)
 }
+})
